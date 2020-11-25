@@ -1,10 +1,8 @@
 const express = require('express')
 const router = express.Router()
 
-const cardapio = require('../cardapio')
+const cardapioController = require('../controller/cardapioController')
 
-router.get('/cardapio', (req,res)=>{
-    res.send(cardapio)
-})
+router.get('/cardapio', cardapioController.listar)
 
 module.exports = router
